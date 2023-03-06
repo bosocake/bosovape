@@ -1,0 +1,101 @@
+:root{
+    --height: 30px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    color: #191919;
+    font-family: SF Pro Display;
+    /* align-content: flex-start; */
+    transition: all 0.1s ease;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+img{
+    width: 100%;
+}
+div, a{
+    display: grid;
+}
+body{
+    background: #e3e2e7;
+}
+.header{
+    display: block;
+    height: 70px;
+    background: #fff;
+    justify-content: center;
+}
+.header_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1120px;
+    margin: 0 auto;
+
+}
+.header_logo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+.header_menu{
+    display: flex;
+    padding: 0 20px 0 0;
+    gap: 20px;
+}
+.header_img{
+    height: 70px;
+    width: auto;
+}
+.header_button{
+    border: 2px solid #191919;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.header_button:hover{
+    background: #191919;
+    color: #fff;
+}
+.main{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+.vape_group{
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 20px;
+    justify-content: center;
+}
+.vape{
+    width: 200px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    gap: 10px;
+}
+.vape_name{
+    font-size: 16px;
+    justify-content: center;
+}
+.vape_button_trash{
+    border: 2px solid #191919;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    user-select: none;
+    background: rgb(255, 255, 255);
+    color: #191919;
+}
