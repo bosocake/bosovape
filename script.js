@@ -13,7 +13,7 @@ function button_trash() {
 
     } 
     else {
-        this.style.cssText = 'background: rgb(255, 255, 255); color: #191919;';
+        this.style.cssText = 'background: none; color: #191919;';
 
     }
 }
