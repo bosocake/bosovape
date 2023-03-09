@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+
     max-width: 1120px;
     margin: 0 auto;
 
@@ -46,6 +46,8 @@ body{
 .header_logo{
     display: flex;
     align-items: center;
+}
+.header_logo_text{
     font-size: 20px;
     font-weight: 900;
 }
@@ -68,6 +70,12 @@ body{
     background: #191919;
     color: #fff;
 }
+.header_vape:first-child, .header_liquids:first-child{
+    display: grid;
+}
+.header_vape:last-child, .header_liquids:last-child{
+    display: none;
+}
 .main{
     margin: 0 auto;
     max-width: 1200px;
@@ -79,11 +87,42 @@ body{
     justify-content: center;
 }
 .vape{
-    width: 200px;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     gap: 10px;
+    box-shadow: 0 0 5px 1.25px #00000015;
+}
+.vape{
+	background: linear-gradient(45deg, #fff, #fff, rgb(0, 0, 0, 0.01), #fff);
+	background-size: 400%;
+	animation: gradient 1s ease ;
+}
+.vape:hover{
+    transform: scale(1.05);
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 100%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+
+}
+.vape_img{
+    animation: showDiv 1s forwards;
+}
+@keyframes showDiv {
+  0%{
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .vape_name{
     font-size: 16px;
@@ -96,6 +135,31 @@ body{
     border-radius: 5px;
     font-weight: bold;
     user-select: none;
-    background: rgb(255, 255, 255);
+    background: none;
     color: #191919;
+}
+@media (max-width: 510px){
+    .header_logo_text{
+        display: none;
+    }
+    .vape_group{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 390px){
+    .vape_group{
+        grid-template-columns: 1fr;
+    }
+    .header_menu{
+        gap: 10px;
+    }
+    .header_button{
+        padding: 10px;
+    }
+    .header_vape:first-child, .header_liquids:first-child{
+        display: none;
+    }
+    .header_vape:last-child, .header_liquids:last-child{
+        display: grid;
+    }
 }
