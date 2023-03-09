@@ -38,10 +38,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     max-width: 1120px;
     margin: 0 auto;
-
 }
 .header_logo{
     display: flex;
@@ -87,16 +85,14 @@ body{
     justify-content: center;
 }
 .vape{
-    padding: 20px;
     background: #fff;
     border-radius: 5px;
-    gap: 10px;
-    box-shadow: 0 0 5px 1.25px #00000015;
-}
-.vape{
+    overflow: hidden;
+    height: 275px;
 	background: linear-gradient(45deg, #fff, #fff, rgb(0, 0, 0, 0.01), #fff);
 	background-size: 400%;
-	animation: gradient 1s ease ;
+    box-shadow: 0 0 5px 1.25px #00000015;
+	animation: gradient 1s ease;
 }
 .vape:hover{
     transform: scale(1.05);
@@ -104,18 +100,27 @@ body{
 @keyframes gradient {
 	0% {
 		background-position: 0% 100%;
+        border-radius: 50px;
+        height: 200px;
 	}
 	50% {
 		background-position: 100% 0%;
+        height: 200px;
 	}
+    100%{
+        border-radius: 5px;
+    }
 
 }
-.vape_img{
+.vape_setting{
+    gap: 10px;
+    padding: 20px;
     animation: showDiv 1s forwards;
 }
 @keyframes showDiv {
   0%{
     opacity: 0;
+    margin-top: -200px;
   }
   50% {
     opacity: 0;
@@ -136,6 +141,8 @@ body{
     font-weight: bold;
     user-select: none;
     background: none;
+    height: max-content;
+
     color: #191919;
 }
 @media (max-width: 510px){
